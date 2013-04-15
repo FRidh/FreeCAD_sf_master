@@ -11,28 +11,41 @@
       FatherNamespace="Base">
     <Documentation>
       <Author Licence="LGPL" Name="Juergen Riegel" EMail="FreeCAD@juergen-riegel.net" />
-      <DeveloperDocu>This is the BaseClass class</DeveloperDocu>
-      <UserDocu>This is the base class</UserDocu>
+      <DeveloperDocu>This is the BaseClass class.</DeveloperDocu>
+      <UserDocu>This is the base class.</UserDocu>
     </Documentation>
     <Methode Name="isDerivedFrom" Const="true">
       <Documentation>
-        <UserDocu>Returns true if given type is a father</UserDocu>
+        <UserDocu>isDerivedFrom( name ):
+                  Returns true if given type is a father.
+                  
+                  :param name: Name of possible father.
+                  :type name: string
+                  
+                  :rtype: bool
+                  </UserDocu>
       </Documentation>
     </Methode>
     <Methode Name="getAllDerivedFrom" Const="true">
       <Documentation>
-        <UserDocu>Returns all descentences</UserDocu>
+        <UserDocu>getAllDerivedFrom()
+                  Returns all descentences.
+                  
+                  :rtype: list
+                  </UserDocu>
       </Documentation>
     </Methode>
     <Attribute Name="Type" ReadOnly="true">
       <Documentation>
-        <UserDocu>Is the type of the FreeCAD object with module domain</UserDocu>
+        <UserDocu>Type
+                  Is the type of the FreeCAD object with module domain</UserDocu>
       </Documentation>
       <Parameter Name="Type" Type="String" />
     </Attribute>
     <Attribute Name="Module" ReadOnly="true">
       <Documentation>
-        <UserDocu>Module in which this class is defined</UserDocu>
+        <UserDocu>Module
+                  Module in which this class is defined</UserDocu>
       </Documentation>
       <Parameter Name="Module" Type="Int"/>
     </Attribute>

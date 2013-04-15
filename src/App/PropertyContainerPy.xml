@@ -15,36 +15,78 @@
     </Documentation>
     <Methode Name="getPropertyByName">
       <Documentation>
-        <UserDocu>Return the value of a named property.</UserDocu>
+        <UserDocu>getPropertyByName( name )
+                  Return the value of a named property.
+                  
+                  :param name: Name of property.
+                  :type name: string
+                  
+                  :rtype: Depends on the type of property.
+                  </UserDocu>
       </Documentation>
     </Methode>
     <Methode Name="getTypeOfProperty">
 		  <Documentation>
-			  <UserDocu>Return the type of a named property. This can be (Hidden,ReadOnly,Output) or any combination. </UserDocu>
+			  <UserDocu>getTypeOfProperty( name )
+                        Return the type of a named property. This can be (Hidden,ReadOnly,Output) or any combination.
+                        
+                        :param name: Name of property.
+                        :type name: string
+                        
+                        :rtype: string
+                        </UserDocu>
 		  </Documentation>
 	  </Methode>
       <Methode Name="setEditorMode">
             <Documentation>
-                <UserDocu>Set the behaviour of the property in the property editor.
-0 - default behaviour
-1 - item is ready-only
-2 - item is hidden
+                <UserDocu>setEditorMode( name, setting ) 
+                          Set the behaviour of the property in the property editor.
+                          
+                          :param name: Name of property.
+                          :type name: string
+                          :param setting: Default, hidden or read-only
+                          :type setting: integer
+                          
+                          :rtype: None
+                          
+                          The following settings are possible:
+                            0 - default behaviour
+                            1 - item is ready-only
+                            2 - item is hidden
                 </UserDocu>
             </Documentation>
         </Methode>
       <Methode Name="getGroupOfProperty">
 		  <Documentation>
-			  <UserDocu>Return the name of the group which the property belongs to in this class. The properties sorted in differnt named groups for convenience.</UserDocu>
+			  <UserDocu>getGroupOfProperty( name )
+                        Return the name of the group which the class property belongs to.
+                        
+                        :param name: Name of property.
+                        :type name: string
+                        
+                        For convenience properties can be sorted in different named groups.
+                        </UserDocu>
 		  </Documentation>
 	  </Methode>
 	  <Methode Name="getDocumentationOfProperty">
 		  <Documentation>
-			  <UserDocu>Return the documentation string of the property of this class.</UserDocu>
+			  <UserDocu>getDocumentationOfProperty( name )
+                        Return the documentation string of this class property.
+                        
+                        :param name: Name of property.
+                        :type name: string
+                        
+                        :rtype: None
+                        </UserDocu>
 		  </Documentation>
 	  </Methode>
     <Attribute Name="PropertiesList" ReadOnly="true">
       <Documentation>
-        <UserDocu>A list of all property names</UserDocu>
+        <UserDocu>PropertiesList
+                  List the names of the properties this object has.
+                  
+                  :rtype: list
+                  </UserDocu>
       </Documentation>
       <Parameter Name="PropertiesList" Type="List"/>
     </Attribute>

@@ -11,51 +11,92 @@
     FatherNamespace="Base">
     <Documentation>
       <Author Licence="LGPL" Name="Werner Mayer" EMail="wmayer@users.sourceforge.net" />
-      <UserDocu>This is a Document class</UserDocu>
+      <UserDocu>This is a Document class.</UserDocu>
     </Documentation>
     <Methode Name="show">
       <Documentation>
-        <UserDocu>Show the object</UserDocu>
+        <UserDocu>show( name )
+                  Show the object.
+                  
+                  :param name: Name of object.
+                  :type name: string
+                  
+                  :rtype: None
+                  </UserDocu>
       </Documentation>
     </Methode>
     <Methode Name="hide">
       <Documentation>
-        <UserDocu>Hide the object</UserDocu>
+        <UserDocu>hide( name ):
+                  Hide the object.
+                  
+                  :param name: Name of object.
+                  :type name: string
+                  
+                  :rtype: None
+                  </UserDocu>
       </Documentation>
     </Methode>
     <Methode Name="setPos">
       <Documentation>
-        <UserDocu>Set the position</UserDocu>
+        <UserDocu>setPos()
+                  Set the position</UserDocu>
       </Documentation>
     </Methode>
     <Methode Name="setEdit">
       <Documentation>
-        <UserDocu>
-          setEdit([String:Name|ViewProvider|DocumentObjet]|,mod)
-          Set the given object in edit mode.
+        <UserDocu>setEdit( name )
+                  Set the given object in edit mode.
+                  
+                  :param name: Name of object.
+                  :type name: string
+                  
+                  :rtype: None
         </UserDocu>
       </Documentation>
     </Methode>
     <Methode Name="resetEdit">
       <Documentation>
-        <UserDocu>
-          Reset (end) the current editing.
+        <UserDocu>resetEdit()
+                  Reset (end) the current editing.
+                  
+                  :rtype: None
         </UserDocu>
       </Documentation>
     </Methode>
     <Methode Name="addAnnotation">
       <Documentation>
-        <UserDocu>Add an Inventor object</UserDocu>
+        <UserDocu>addAnnotation( name, file)
+                  Add an Inventor object from file
+                  
+                  :param name: Name of annotation.
+                  :type name: string
+                  :param file: File containing annotation.
+                  :type file: string
+                  
+                  :rtype: None
+                  </UserDocu>
       </Documentation>
     </Methode>
     <Methode Name="update">
       <Documentation>
-        <UserDocu>Update the view representations of all objects</UserDocu>
+        <UserDocu>update()
+                  Update the view representations of all objects.
+                  
+                  :rtype: None
+                  </UserDocu>
       </Documentation>
     </Methode>
     <Methode Name="getObject">
       <Documentation>
-        <UserDocu>Return the object with the given name</UserDocu>
+        <UserDocu>getObject( name )
+                  Return the object with the given name.
+                  
+                  :param name: Name of object.
+                  :type name: string
+                  
+                  :rtype: :class:`FreeCADGui.ViewProviderObject`
+                  </UserDocu>
       </Documentation>
     </Methode>
 	<Methode Name="activeObject">

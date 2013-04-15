@@ -15,32 +15,62 @@
     </Documentation>
     <Methode Name="newObject">
       <Documentation>
-        <UserDocu>Create and add an object with given type and name to the group</UserDocu>
+        <UserDocu>Create and add an object with given type and name to the group.</UserDocu>
       </Documentation>
     </Methode>
 	  <Methode Name="addObject">
 		  <Documentation>
-			  <UserDocu>Add an object to the group</UserDocu>
+			  <UserDocu>addObject( object )
+				    Add an object to the group.
+				    
+				    :param object: object to add to the group
+				    :type object: :class`FreeCAD.DocumentObject`
+				    :rtype: None
+				    </UserDocu>
 		  </Documentation>
 	  </Methode>
 	  <Methode Name="removeObject">
       <Documentation>
-        <UserDocu>Remove an object from the group</UserDocu>
+        <UserDocu>removeObject( object )
+		  Remove an object from the group.
+		  
+		  :param object: object to add to the group
+		  :type object: :class`FreeCAD.DocumentObject`
+		  :rtype: None
+				    
+		  </UserDocu>
       </Documentation>
     </Methode>
 	  <Methode Name="removeObjectsFromDocument">
 		  <Documentation>
-			  <UserDocu>Remove all child objects from the group and document</UserDocu>
+			  <UserDocu>removeObjectsFromDocument()
+				    Remove all child objects from the group and document.
+				    
+				    :rtype: None
+				    </UserDocu>
 		  </Documentation>
 	  </Methode>
 	  <Methode Name="getObject">
       <Documentation>
-        <UserDocu>Return the object with the given name</UserDocu>
+        <UserDocu>getObject( name )
+		  Return the object with the given name.
+		  
+		  :param name: Name of the object
+		  :param type: string
+		  :rtype: None
+		  
+		  </UserDocu>
       </Documentation>
     </Methode>
     <Methode Name="hasObject">
       <Documentation>
-        <UserDocu>Checks if the group has a given object</UserDocu>
+        <UserDocu>hasObject( object )
+		  Checks if the group has a given object.
+		  
+		  :param object: object to be checked for
+		  :type object: :class`FreeCAD.DocumentObject`
+		  :rtype: None
+		  </UserDocu>
       </Documentation>
     </Methode>
     <CustomAttributes />

@@ -11,16 +11,24 @@
 		FatherNamespace="Gui">
 		<Documentation>
 			<Author Licence="LGPL" Name="Werner Mayer" EMail="wmayer@users.sourceforge.net" />
-			<UserDocu>This is the ViewProvider base class</UserDocu>
+			<UserDocu>This is the ViewProvider base class.</UserDocu>
 		</Documentation>
 		<Methode Name="update">
 			<Documentation>
-				<UserDocu>Update the view representation of the object</UserDocu>
+				<UserDocu>update()
+                          Update the view representation of the object.
+                          
+                          :rtype: None
+                          </UserDocu>
 			</Documentation>
 		</Methode>
 		<Attribute Name="Object" ReadOnly="true">
 			<Documentation>
-				<UserDocu>Return the associated data object</UserDocu>
+				<UserDocu>Object
+                          Return the associated data object.
+                          
+                          :rtype: :class:`FreeCAD.DocumentObject`
+                          </UserDocu>
 			</Documentation>
 			<Parameter Name="Object" Type="Object" />
 		</Attribute>

@@ -12,23 +12,26 @@
       Reference="true">
     <Documentation>
       <Author Licence="LGPL" Name="Juergen Riegel" EMail="Juergen.Riegel@web.de" />
-      <UserDocu>Father of all complex geometric data types</UserDocu>
+      <UserDocu>Father of all complex geometric data types.</UserDocu>
     </Documentation>
 	  <Attribute Name="BoundBox" ReadOnly="true">
 		  <Documentation>
-			  <UserDocu>Get the BoundBox of the object</UserDocu>
+			  <UserDocu>BoundBox
+                        Get the BoundBox of the object.</UserDocu>
 		  </Documentation>
 		  <Parameter Name="BoundBox" Type="Object" />
 	  </Attribute>
 	  <Attribute Name="Placement" ReadOnly="false">
 		  <Documentation>
-			  <UserDocu>Get the current transformation of the object as placement</UserDocu>
+			  <UserDocu>Placement
+                        Get the current transformation of the object as placement.</UserDocu>
 		  </Documentation>
 		  <Parameter Name="Placement" Type="Object" />
 	  </Attribute>
 	  <Attribute Name="Matrix" ReadOnly="false">
 		  <Documentation>
-			  <UserDocu>Get the current transformation of the object as matrix</UserDocu>
+			  <UserDocu>Matrix
+                        Get the current transformation of the object as matrix.</UserDocu>
 		  </Documentation>
 		  <Parameter Name="Matrix" Type="Object" />
 	  </Attribute>

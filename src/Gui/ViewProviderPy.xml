@@ -15,32 +15,59 @@
 		</Documentation>
 		<Methode Name="show">
 			<Documentation>
-				<UserDocu>Show the object</UserDocu>
+				<UserDocu>show()
+                          Show the object.
+                          
+                          :rtype: None
+                          </UserDocu>
 			</Documentation>
 		</Methode>
 		<Methode Name="hide">
 			<Documentation>
-				<UserDocu>Hide the object</UserDocu>
+				<UserDocu>hide()
+                          Hide the object.
+                          
+                          :rtype: None
+                          </UserDocu>
 			</Documentation>
 		</Methode>
 		<Methode Name="isVisible">
 			<Documentation>
-				<UserDocu>Check if the object is visible</UserDocu>
+				<UserDocu>isVisible()
+                          Check if the object is visible
+                          
+                          :rtype: bool
+                          </UserDocu>
 			</Documentation>
 		</Methode>
 		<Methode Name="listDisplayModes">
 			<Documentation>
-				<UserDocu>Show a list of all display modes</UserDocu>
+				<UserDocu>listDisplayModes()
+                          Show a list of all display modes.
+                          
+                          :rtype: list
+                          </UserDocu>
 			</Documentation>
 		</Methode>
 		<Methode Name="toString">
 			<Documentation>
-				<UserDocu>Return a string representation of the Inventor node</UserDocu>
+				<UserDocu>toString()
+                          Return a string representation of the Inventor node.
+                          
+                          :rtype: string
+                          </UserDocu>
 			</Documentation>
 		</Methode>
 		<Methode Name="startEditing">
 			<Documentation>
-				<UserDocu>Start the editing mode (default=0)</UserDocu>
+				<UserDocu>startEditing( mode=0 )
+                          Start the editing mode.
+                          
+                          :param mode: Mode
+                          :type mode: int
+                          
+                          :rtype: bool
+                          </UserDocu>
 			</Documentation>
 		</Methode>
 		<Methode Name="finishEditing">

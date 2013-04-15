@@ -20,24 +20,43 @@
 		</Methode>
 		<Methode Name="addProperty">
 			<Documentation>
-				<UserDocu>
-					addProperty(string, string) -- Add a generic property.
-					The first argument specifies the type, the second the
-					name of the property.
+				<UserDocu>addProperty( type, name, group, doc )
+                          Add a generic property.
+                          
+                          :param type: Type of property.
+                          :type type: string
+                          :param name: Name of property.
+                          :type name: string
+                          :param group: Name of group.
+                          :type group: string
+                          :param doc: Description of the property.
+                          :type doc: string
+                          
+                          :rtype: None
 				</UserDocu>
 			</Documentation>
 		</Methode>
 		<Methode Name="removeProperty">
 			<Documentation>
-				<UserDocu>
-					removeProperty(string) -- Remove a generic property.
-					Note, you can only remove user-defined properties but not built-in ones.
+				<UserDocu>removeProperty( name )
+                          Remove a generic property.
+                          
+                          :param name: Name of property.
+                          :type name: string
+                          
+                          :rtype: None
+                          
+                          ..note:: You can only remove user-defined properties, not built-in ones.
 				</UserDocu>
 			</Documentation>
 		</Methode>
 		<Methode Name="supportedProperties">
 			<Documentation>
-				<UserDocu>A list of supported property types</UserDocu>
+				<UserDocu>supportedProperties()
+                          Show the supported property types.
+                          
+                          :rtype: list
+                          </UserDocu>
 			</Documentation>
 		</Methode>
 	</PythonExport>

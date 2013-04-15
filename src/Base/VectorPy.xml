@@ -1,168 +1,273 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenerateModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="generateMetaModel_Module.xsd">
-	<PythonExport 
-		Father="PyObjectBase" 
-		Name="VectorPy" 
-		Twin="Vector" 
-		TwinPointer="Vector3d" 
-		Include="Base/Vector3D.h" 
-		FatherInclude="Base/PyObjectBase.h" 
-		Namespace="Base" 
-		Constructor="true"
-		Delete="true"
-		NumberProtocol="true"
-		RichCompare="true"
-		FatherNamespace="Base">
-	<Documentation>
-		<Author Licence="LGPL" Name="Juergen Riegel" EMail="FreeCAD@juergen-riegel.net" />
-		<DeveloperDocu>This is the Vector export class</DeveloperDocu>
-		<UserDocu>This class represents a 3D float vector</UserDocu>
-	</Documentation>
-		<Methode Name="add" Const="true">
-			<Documentation>
-				<UserDocu>add(Vector)
-					      returns the sum of this and another vector
-				</UserDocu>
-			</Documentation>
-		</Methode>
-		<Methode Name="sub" Const="true">
-			<Documentation>
-				<UserDocu>sub(Vector)
-					      returns the difference of this and another vector
-				</UserDocu>
-			</Documentation>
-		</Methode>
-		<Methode Name="scale">
-			<Documentation>
-				<UserDocu>scale(Float,Float,Float)
-					      scales (multiplies) this vector by a factor
-			    </UserDocu>
-			</Documentation>
-		</Methode>
-		<Methode Name="multiply">
-			<Documentation>
-				<UserDocu>multiply(Float)
-					      multiplies (scales) this vector by a single factor
-				</UserDocu>
-			</Documentation>
-		</Methode>
-		<Methode Name="dot" Const="true">
-			<Documentation>
-				<UserDocu>dot(Vector)
-						  returns the dot product of the this vector with another one
-				</UserDocu>
-			</Documentation>
-		</Methode>
-		<Methode Name="cross" Const="true">
-			<Documentation>
-				<UserDocu>cross(Vector)
-					      returns the cross product between this and another vector
-				</UserDocu>
-			</Documentation>
-		</Methode>
-		<Methode Name="getAngle" Const="true">
-			<Documentation>
-				<UserDocu>getAngle(Vector)
-					      returns the angle in radians between this and another vector
-				</UserDocu>
-			</Documentation>
-		</Methode>
-		<Methode Name="normalize">
-			<Documentation>
-				<UserDocu>normalize()
-						  normalizes the vector to the length of 1.0
-				</UserDocu>
-			</Documentation>
-		</Methode>
-		<Methode Name="projectToLine">
-			<Documentation>
-				<UserDocu>projectToLine(Vector,Vector)
-						  projects the vector on a line defined by a base point and a direction
-				</UserDocu>
-			</Documentation>
-		</Methode>
-		<Methode Name="projectToPlane">
-			<Documentation>
-				<UserDocu>projectToPlane(Vector,Vector)
-						  projects the vector on a plane defined by a base point and a normal
-				</UserDocu>
-			</Documentation>
-		</Methode>
-		<Methode Name="distanceToLine" Const="true">
-			<Documentation>
-				<UserDocu>distanceToLine(Vector,Vector)
-						  returns the distance between this vector and a line defined by
-						  a base point and a direction
-				</UserDocu>
-			</Documentation>
-		</Methode>
-		<Methode Name="distanceToLineSegment" Const="true">
-			<Documentation>
-				<UserDocu>distanceToLineSegment(Vector,Vector)
-						  returns the distance between this vector and a line segment defined by
-						  a base point and a direction
-				</UserDocu>
-			</Documentation>
-		</Methode>
-		<Methode Name="distanceToPlane" Const="true">
-			<Documentation>
-				<UserDocu>distanceToPlane(Vector,Vector)
-						  returns the distance between this vector and a plane defined by
-						  a base point and a normal
-				</UserDocu>
-			</Documentation>
-		</Methode>
-		<Attribute Name="Length" ReadOnly="false">
-			<Documentation>
-				<UserDocu>Length([Float]) -> Float
-						  gets or sets the length of this vector
-				</UserDocu>
-			</Documentation>
-			<Parameter Name="Type" Type="Float" />
-		</Attribute>
-		<Attribute Name="x" ReadOnly="false">
-			<Documentation>
-				<UserDocu>x([Float]) -> Float
-						  gets or sets the X component of this vector
-				</UserDocu>
-			</Documentation>
-			<Parameter Name="x" Type="Float"/>
-		</Attribute>
-		<Attribute Name="y" ReadOnly="false">
-			<Documentation>
-				<UserDocu>y([Float]) -> Float
-						  gets or sets the Y component of this vector
-				</UserDocu>
-			</Documentation>
-			<Parameter Name="y" Type="Float"/>
-		</Attribute>
-		<Attribute Name="z" ReadOnly="false">
-			<Documentation>
-				<UserDocu>z([Float]) -> Float
-						  gets or sets the Z component of this vector
-				</UserDocu>
-			</Documentation>
-			<Parameter Name="z" Type="Float"/>
-		</Attribute>
-		<Sequence
-			sq_length="true"
-			sq_concat="false"
-			sq_repeat="false"
-			sq_item="true"
-			sq_slice="false"
-			sq_ass_item="true"
-			sq_ass_slice="false"
-			sq_contains="false"
-			sq_inplace_concat="false"
-			sq_inplace_repeat="false">
-		</Sequence>
-		<ClassDeclarations>public:
-    VectorPy(const Vector3d &amp; vec, PyTypeObject *T = &amp;Type)
-    :PyObjectBase(new Vector3d(vec),T){}
-    VectorPy(const Vector3f &amp; vec, PyTypeObject *T = &amp;Type)
-    :PyObjectBase(new Vector3d(vec.x,vec.y,vec.z),T){}
-    Vector3d value() const
-    { return *(getVectorPtr()); }
-		</ClassDeclarations>
-	</PythonExport>
-</GenerateModel>
+    <PythonExport 
+    Father="PyObjectBase" 
+    Name="VectorPy" 
+    Twin="Vector" 
+    TwinPointer="Vector3d" 
+    Include="Base/Vector3D.h" 
+    FatherInclude="Base/PyObjectBase.h" 
+    Namespace="Base" 
+    Constructor="true"
+    Delete="true"
+    NumberProtocol="true"
+    RichCompare="true"
+        FatherNamespace="Base">
+            <Documentation>
+                <Author Licence="LGPL" Name="Juergen Riegel" EMail="FreeCAD@juergen-riegel.net" />
+                <DeveloperDocu>This is the Vector export class</DeveloperDocu>
+                <UserDocu>This class represents a 3D float vector</UserDocu>
+            </Documentation>
+            <Methode Name="add" Const="true">
+                <Documentation>
+                    <UserDocu>
+                        add( vector )
+                        Returns the sum of this and another vector.
+                        
+                        :param vector: Vector to be added.
+                        :type vector: :class:`FreeCAD.Vector`
+                        
+                        :rtype: :class:`FreeCAD.Vector`
+                    </UserDocu>
+                </Documentation>
+            </Methode>
+            <Methode Name="sub" Const="true">
+                <Documentation>
+                    <UserDocu>
+                        sub( vector )
+                        Returns the difference of this and another vector.
+                        
+                        :param vector: Vector to be subtracted.
+                        :type: vector: :class:`FreeCAD.Vector`
+                        
+                        :rtype: :class:`FreeCAD.Vector`
+                    </UserDocu>
+                </Documentation>
+            </Methode>
+            <Methode Name="scale">
+                <Documentation>
+                    <UserDocu>
+                        scale( x, y, z)
+                        Scale or multiply this vector by a factor.
+                        
+                        :param x: Factor x component.
+                        :type x: float
+                        :param y: Factor y component.
+                        :type y: float
+                        :param z: Factor z component.
+                        :type z: float
+                        
+                        :rtype: :class:`FreeCAD.Vector`
+                    </UserDocu>
+                </Documentation>
+            </Methode>
+            <Methode Name="multiply">
+                <Documentation>
+                    <UserDocu>
+                        multiply( x )
+                        Scale or multiply this vector by a single factor.
+                        
+                        :param x: Factor
+                        :type x: float
+                        
+                        :rtype: :class:`FreeCAD.Vector`
+                    </UserDocu>
+                </Documentation>
+            </Methode>
+            <Methode Name="dot" Const="true">
+                <Documentation>
+                    <UserDocu>
+                        dot( vector )
+                        Returns the dot product of this vector with another one.
+                        
+                        :param vector: Vector
+                        :type vector: :class:`FreeCAD.Vector`
+                        
+                        :rtype: :class:`FreeCAD.Vector`
+                        
+                        .. math:: c = \\mathbf{a} \\cdot \\mathbf{b} = \\sum_{i=1}^N a_i b_i 
+                    </UserDocu>
+                </Documentation>
+            </Methode>
+            <Methode Name="cross" Const="true">
+                <Documentation>
+                    <UserDocu>
+                        cross( vector )
+                        Returns the cross product between this and another vector.
+                        
+                        :param vector: Vector
+                        :type vector: :class:`FreeCAD.Vector`
+                        
+                        :rtype: :class:`FreeCAD.Vector`
+                        
+                        .. math:: \\mathbf{a} \\times \\mathbf{b} = ||\\mathbf{a}|| ||\\mathbf{b}|| \\sin{\\theta} \\mathbf{n}
+                    </UserDocu>
+                </Documentation>
+            </Methode>
+            <Methode Name="getAngle" Const="true">
+                <Documentation>
+                    <UserDocu>
+                        getAngle( vector )
+                        Returns the angle in radians between this and another vector.
+                        
+                        :param vector: Vector
+                        :type vector: :class:`FreeCAD.Vector`
+                        
+                        :rtype: float
+                    </UserDocu>
+                </Documentation>
+            </Methode>
+            <Methode Name="normalize">
+                <Documentation>
+                    <UserDocu>
+                        normalize()
+                        Normalize the vector in-place to the length of 1.0.
+                        
+                        :rtype: :class:`FreeCAD.Vector`
+                    </UserDocu>
+                </Documentation>
+            </Methode>
+            <Methode Name="projectToLine">
+                <Documentation>
+                    <UserDocu>
+                        projectToLine( base, dir )
+                        Project the vector in-place on a line defined by a base point and a direction.
+                        
+                        :param base: Base point
+                        :type base: :class:`FreeCAD.Vector`
+                        :param dir: Direction
+                        :type dir: :class:`FreeCAD.Vector`
+                        
+                        :rtype: :class:`FreeCAD.Vector`
+                    </UserDocu>
+                </Documentation>
+            </Methode>
+            <Methode Name="projectToPlane">
+                <Documentation>
+                    <UserDocu>
+                        projectToPlane( base, normal )
+                        Project the vector in-place on a plane defined by a base point and a normal.
+                        
+                        :param base: Base point
+                        :type base: :class:`FreeCAD.Vector`
+                        :param normal: Normal
+                        :type normal: :class:`FreeCAD.Vector`
+                        
+                        :rtype: :class:`FreeCAD.Vector`
+                    </UserDocu>
+                </Documentation>
+            </Methode>
+            <Methode Name="distanceToLine" Const="true">
+                <Documentation>
+                    <UserDocu>
+                        distanceToLine( base, dir )
+                        Returns the distance between this vector and a line defined by
+                        a base point and a direction.
+                        
+                        :param base: Base point
+                        :type base: :class:`FreeCAD.Vector`
+                        :param dir: Direction
+                        :type dir: :class:`FreeCAD.Vector`
+                        
+                        :rtype: :class:`FreeCAD.Vector`
+                    </UserDocu>
+                </Documentation>
+            </Methode>
+            <Methode Name="distanceToLineSegment" Const="true">
+                <Documentation>
+                    <UserDocu>
+                        distanceToLineSegment( base, dir )
+                        Returns the distance between this vector and a line segment defined by
+                        a base point and a direction.
+                        
+                        :param base: Base point
+                        :type base: :class:`FreeCAD.Vector`
+                        :param dir: Direction
+                        :type dir: :class:`FreeCAD.Vector`
+                        
+                        :rtype: :class:`FreeCAD.Vector`
+                    </UserDocu>
+                </Documentation>
+            </Methode>
+            <Methode Name="distanceToPlane" Const="true">
+                <Documentation>
+                    <UserDocu>
+                        distanceToPlane( base, dir)
+                        Returns the distance between this vector and a plane defined by
+                        a base point and a normal.
+                        
+                        :param base: Base point
+                        :type base: :class:`FreeCAD.Vector`
+                        :param dir: Direction
+                        :type dir: :class:`FreeCAD.Vector`
+                        
+                        :rtype: :class:`FreeCAD.Vector`
+                    </UserDocu>
+                </Documentation>
+            </Methode>
+            <Attribute Name="Length" ReadOnly="false">
+                <Documentation>
+                    <UserDocu>
+                        Length
+                        Get or set the length of this vector.
+                        
+                        :rtype: float
+                    </UserDocu>
+                </Documentation>
+                <Parameter Name="Type" Type="Float" />
+            </Attribute>
+            <Attribute Name="x" ReadOnly="false">
+                <Documentation>
+                    <UserDocu>
+                        x
+                        Gets or sets the X component of this vector.
+                        
+                        :rtype: float
+                    </UserDocu>
+                </Documentation>
+                <Parameter Name="x" Type="Float"/>
+            </Attribute>
+            <Attribute Name="y" ReadOnly="false">
+                <Documentation>
+                    <UserDocu>
+                        y
+                        Gets or sets the Y component of this vector.
+                        
+                        :rtype: Float
+                    </UserDocu>
+                </Documentation>
+                <Parameter Name="y" Type="Float"/>
+            </Attribute>
+            <Attribute Name="z" ReadOnly="false">
+                <Documentation>
+                    <UserDocu>
+                        z
+                        Gets or sets the Z component of this vector.
+                        
+                        :rtype: Float
+                    </UserDocu>
+                </Documentation>
+                <Parameter Name="z" Type="Float"/>
+            </Attribute>
+            <Sequence
+            sq_length="true"
+            sq_concat="false"
+            sq_repeat="false"
+            sq_item="true"
+            sq_slice="false"
+            sq_ass_item="true"
+            sq_ass_slice="false"
+            sq_contains="false"
+            sq_inplace_concat="false"
+            sq_inplace_repeat="false">
+            </Sequence>
+            <ClassDeclarations>public:
+                VectorPy(const Vector3d &amp; vec, PyTypeObject *T = &amp;Type)
+                :PyObjectBase(new Vector3d(vec),T){}
+                VectorPy(const Vector3f &amp; vec, PyTypeObject *T = &amp;Type)
+                :PyObjectBase(new Vector3d(vec.x,vec.y,vec.z),T){}
+                Vector3d value() const
+                { return *(getVectorPtr()); }
+            </ClassDeclarations>
+        </PythonExport>
+    </GenerateModel>

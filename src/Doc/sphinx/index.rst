@@ -9,29 +9,11 @@ FreeCAD python API documentation
 This is the complete python API reference of the FreeCAD appication
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 2
 
-   FreeCAD.rst
-   FreeCADGui.rst
-   Vector.rst
-   Placement.rst
-   Matrix.rst
-   Document.rst
-   DocumentObject.rst
-   ViewProvider.rst
-   Mesh.rst
-   Part.rst
-   Sketch.rst
-   PartDesign.rst
-   Draft.rst
-   DraftVecUtils.rst
-   DraftGeomUtils.rst
-   DraftTrackers.rst
-   DraftSnap.rst
-   Arch.rst
-   Drawing.rst
-   RayTracing.rst
-
+   Base.rst
+   Modules.rst
+   
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`

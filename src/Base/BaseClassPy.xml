@@ -16,7 +16,7 @@
     </Documentation>
     <Methode Name="isDerivedFrom" Const="true">
       <Documentation>
-        <UserDocu>isDerivedFrom( name ):
+        <UserDocu>isDerivedFrom( name )
                   Returns true if given type is a father.
                   
                   :param name: Name of possible father.

@@ -37,6 +37,23 @@
 
 import sys, os, commands
 
+
+
+def skip(app, what, name, obj, skip, options):
+    """Include class members which by default would be hidden."""
+    if name == "__init__":
+        return False
+    return skip
+
+def setup(app):
+    app.connect("autodoc-skip-member", skip)
+
+
+
+
+
+
+
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -55,7 +72,7 @@ elif commands.getstatusoutput("locate FreeCAD/lib")[0] == 0:
     
 # locate TemplatePyMod
 if commands.getstatusoutput("locate TemplatePyMod")[0] == 0:
-    path = commands.getstatusoutput("locate TemplatePyMod")[1].split()[0]
+    path = commands.getstatusoutput("locate src/Mod/TemplatePyMod")[1].split()[0]
     sys.path.append(path)
 
 import FreeCAD, FreeCADGui
@@ -68,7 +85,7 @@ FreeCADGui.showMainWindow() # this is needed for complete import of GUI modules
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.autodoc', 'sphinx.ext.pngmath']
+extensions = ['sphinx.ext.autodoc', 'sphinx.ext.pngmath', 'sphinx.ext.inheritance_diagram']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -136,7 +153,7 @@ pygments_style = 'sphinx'
 # a list of builtin themes.
 html_theme = 'default'
 
-html_style = 'freecad.css'
+#html_style = 'freecad.css'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the

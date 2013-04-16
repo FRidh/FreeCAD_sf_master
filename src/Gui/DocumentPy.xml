@@ -27,7 +27,7 @@
     </Methode>
     <Methode Name="hide">
       <Documentation>
-        <UserDocu>hide( name ):
+        <UserDocu>hide( name )
                   Hide the object.
                   
                   :param name: Name of object.

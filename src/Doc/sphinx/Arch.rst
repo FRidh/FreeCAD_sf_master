@@ -6,13 +6,17 @@ The Arch module is a metamodule that imports useful methods from several of the 
 .. toctree::
    :maxdepth: 4
 
-.. automodule:: Arch
-   :members:
-
+   
 --------
-ArchWall
---------   
-.. automodule:: ArchWall
+ArchAxis
+--------
+.. automodule:: ArchAxis
+   :members:
+ 
+------------
+ArchBuilding
+------------
+.. automodule:: ArchBuilding
    :members:
 
 --------
@@ -20,13 +24,37 @@ ArchCell
 --------   
 .. automodule:: ArchCell
    :members:
+   
+------------
+ArchCommands
+------------
+.. automodule:: ArchCommands
+   :members:
 
-----------
+-------------
+ArchComponent
+-------------
+.. automodule:: ArchComponent
+   :members:
+
+---------
 ArchFloor
-----------
+---------
 .. automodule:: ArchFloor
    :members:
 
+----------
+ArchRoof
+----------
+.. automodule:: ArchRoof
+   :members:
+
+----------------
+ArchSectionPlane
+----------------
+.. automodule:: ArchSectionPlane
+   :members:
+   
 --------
 ArchSite
 --------
@@ -39,32 +67,44 @@ ArchStructure
 .. automodule:: ArchStructure
    :members:
 
+-------------
+ArchVRM
+-------------
+.. automodule:: ArchVRM
+   :members:
+
+--------
+ArchWall
+--------   
+.. automodule:: ArchWall
+   :members:
+   
 ----------
 ArchWindow
 ----------
 .. automodule:: ArchWindow
    :members:
-   
-----------------
-ArchSectionPlane
-----------------
-.. automodule:: ArchSectionPlane
-   :members:
-   
-------------
-ArchBuilding
-------------
-.. automodule:: ArchBuilding
+
+-----------
+importDAE
+-----------
+.. automodule:: importDAE
    :members:
 
-------------
-ArchCommands
-------------
-.. automodule:: ArchCommands
+-----------
+importIFC
+-----------
+.. automodule:: importIFC
    :members:
 
---------
-ArchAxis
---------
-.. automodule:: ArchAxis
+-----------
+importOBJ
+-----------
+.. automodule:: importOBJ
+   :members:
+   
+-----------   
+importWebGL
+-----------
+.. automodule:: importWebGL
    :members:

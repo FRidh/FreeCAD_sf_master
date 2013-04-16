@@ -3,15 +3,20 @@
 
 class DocumentObject(object):
     """The Document object is the base class for all FreeCAD objects.
-    Example of use:
     
-    import FreeCAD
+    Example of use::
+        
+        import FreeCAD
+
+        doc = FreeCAD.newDocument()
+        
+        myobj = doc.addObject("Mesh::FeaturePython","MyName")
+        
+        myobj.addProperty("App::PropertyLinkList","Layers","Base", "Layers")
     
-    doc=FreeCAD.newDocument()
     
-    myobj = doc.addObject("Mesh::FeaturePython","MyName")
+    """
     
-    myobj.addProperty("App::PropertyLinkList","Layers","Base", "Layers")"""
     def __init__(self):
         self.__object__=None
     def execute(self):

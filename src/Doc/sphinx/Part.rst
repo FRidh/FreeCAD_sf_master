@@ -7,5 +7,4 @@ The Part module
 .. automodule:: Part
    :members:
    :show-inheritance:
-
-   .. autoclass:: Ellipse
+   
